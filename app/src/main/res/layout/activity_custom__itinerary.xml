@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.075"
+        android:text="Fill in these fields..."
+        android:textSize="18dp"
+        android:gravity="center_horizontal"/>
+    <LinearLayout
+        android:layout_weight="0.075"
+        android:orientation="horizontal"
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:paddingTop="5dp"
+        >
+        <AutoCompleteTextView
+            android:id="@+id/actv_days"
+            android:layout_weight="0.25"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:hint = "Duration"
+            android:textSize="14sp"
+            />
+        <EditText
+            android:id="@+id/et_budget"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.55"
+            android:hint = "Budget/person (INR)"
+            android:inputType="number"
+            android:textSize="14sp"/>
+        <AutoCompleteTextView
+            android:id = "@+id/actv_places"
+            android:layout_weight="0.3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:hint = "Destination"
+            android:textSize="14sp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_weight="0.075"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal">
+        <EditText
+            android:id = "@+id/et_adults_trv"
+            android:layout_weight="0.3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:hint = "Number of Adults"
+            android:inputType="number"
+            android:textSize="14sp"/>
+
+        <EditText
+            android:id = "@+id/et_rooms_req"
+            android:layout_width="0dp"
+            android:layout_weight="0.4"
+            android:layout_height="match_parent"
+            android:hint = "Rooms required"
+            android:inputType="number"
+            android:textSize="14sp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_weight="0.075"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal">
+        <EditText
+            android:id = "@+id/et_child_trv"
+            android:layout_width="0dp"
+            android:layout_weight="0.4"
+            android:layout_height="match_parent"
+            android:hint = "Number of Children"
+            android:textSize="14sp"
+            android:inputType="number"
+            />
+        <EditText
+            android:id = "@+id/et_childage"
+            android:layout_weight="0.6"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textSize="14sp"
+            android:hint = "Child Age (seperate by a space) "
+            />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.07"
+        android:gravity="center">
+        <Button
+            android:id="@+id/but_conf"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Confirm"/>
+        <Button
+            android:id="@+id/but_change"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.05"
+            android:text="Change"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.08"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        >
+        <TextView
+            android:id= "@+id/text_day_indicator"
+            android:layout_weight = "0.15"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:text="Date - "/>
+        <EditText
+            android:id="@+id/et_date_from"
+            android:layout_weight = "0.3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            />
+        <TextView
+            android:layout_weight="0.1"
+            android:layout_width="0dp"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"
+            android:text = " to "/>
+        <EditText
+            android:id="@+id/et_date_to"
+            android:layout_weight = "0.3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            />
+        <ImageButton
+            android:id = "@+id/imgbtn_help"
+            android:layout_width="0dp"
+            android:layout_weight="0.15"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:src = "@drawable/help"
+            android:scaleType="fitXY"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_weight="0.1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="40dp">
+        <TextView
+            android:id = "@+id/tv_place"
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text = " Enter a Place "
+            android:textSize="18sp"
+            android:layout_below="@+id/tv_hotel"
+            android:textColor="#000000"/>
+        <EditText
+            android:id="@+id/et_place"
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="No Preference"
+            android:textSize="18sp"
+            android:layout_toRightOf="@+id/tv_place"
+            android:layout_below="@+id/et_hotel"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_weight="0.1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+        <TextView
+            android:id = "@+id/tv_hotel"
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text = "Category of Hotel"
+            android:layout_below="@+id/tv_activity"
+            android:textColor="#000000"/>
+        <AutoCompleteTextView
+            android:id="@+id/actv_hotel"
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:textSize="18sp"
+            android:layout_height="wrap_content"
+            android:hint="None"
+            android:layout_toRightOf="@+id/tv_hotel"
+            android:layout_below="@+id/et_activity"
+            android:layout_above="@+id/tv_place"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_weight="0.10"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+        <TextView
+            android:id = "@+id/tv_activity"
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text = "Anything on your wishlist"
+            android:textColor="#000000"/>
+        <EditText
+            android:id="@+id/et_activity"
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="None"
+            android:textSize="18sp"
+            android:layout_toRightOf="@+id/tv_activity"
+            android:layout_above="@+id/tv_hotel"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id = "@+id/ll_last"
+        android:layout_weight="0.1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal">
+            <Button
+                android:id = "@+id/but_next"
+                android:layout_weight="0.5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text = " Next " />
+            <Button
+                android:id = "@+id/but_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text = "Back"/>
+        </LinearLayout>
+    <RelativeLayout
+        android:layout_weight="0.1"
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal"
+        android:layout_height="0dp">
+        <Button
+            android:id = "@+id/but_finish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text = " Request Itinerary " />
+    </RelativeLayout>
+</LinearLayout>

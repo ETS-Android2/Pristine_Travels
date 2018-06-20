@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.pristinetravel.pristinetravels.Packages_activity"
+    android:padding = "1dp"
+    android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#000000"
+        >
+        <LinearLayout
+            android:layout_weight="0.2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:background="#FFFFFF">
+            <EditText
+                android:id = "@+id/et_number_adult"
+                android:layout_weight="0.3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:hint = "@string/number_of_adults"
+                android:inputType="number"
+                android:textSize="14sp"/>
+
+            <EditText
+                android:id="@+id/et_rooms"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.4"
+                android:hint="@string/rooms_required"
+                android:inputType="number"
+                android:textSize="14sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="0.2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:background="#FFFFFF">
+            <EditText
+                android:id = "@+id/et_child_pack"
+                android:layout_width="0dp"
+                android:layout_weight="0.4"
+                android:layout_height="match_parent"
+                android:hint = "Number of Children"
+                android:textSize="14sp"
+                android:inputType="number"
+                />
+            <EditText
+                android:id = "@+id/et_childage_pack"
+                android:layout_weight="0.6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:textSize="12sp"
+                android:hint = "Child(ren) Age(seperate multiple with comma) "
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.15"
+            android:orientation="horizontal"
+            android:background="#FFFFFF"
+            >
+            <TextView
+                android:id= "@+id/text_day_indicator"
+                android:layout_weight = "0.15"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="Date - "/>
+            <EditText
+                android:id="@+id/et_date_from_pack"
+                android:layout_weight = "0.325"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:inputType="date"
+                />
+            <TextView
+                android:layout_weight="0.2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text = " to "/>
+            <EditText
+                android:id="@+id/et_date_to_pack"
+                android:layout_weight = "0.325"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:inputType="date"
+                />
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="#FFFFFF">
+            <Button
+                android:id="@+id/but_conf_pack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Confirm"/>
+            <Button
+                android:id="@+id/but_change_pack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.05"
+                android:text="Change"/>
+        </RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:text = " READY-MADE PACKAGES "/>
+        <Button
+            android:id = "@+id/but_Aus"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor = "#FFFFFF"
+            android:text="Australia"/>
+        <Button
+            android:id = "@+id/but_NZ"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor = "#FFFFFF"
+            android:text="New Zealand"/>
+        <Button
+            android:id = "@+id/but_Sing"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor = "#FFFFFF"
+            android:text="Singapore"/>
+        <Button
+            android:id="@+id/but_Dub"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor = "#FFFFFF"
+            android:text="Dubai"/>
+        <Button
+            android:id = "@+id/but_Thai"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor = "#FFFFFF"
+            android:text="Thailand"/>
+        <Button
+            android:id = "@+id/but_Eur1"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor = "#FFFFFF"
+            android:text="Western Europe"/>
+        <Button
+            android:id = "@+id/but_Eur2"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor = "#FFFFFF"
+            android:text="Eastern Europe"/>
+        <Button
+            android:id = "@+id/but_UK"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor = "#FFFFFF"
+            android:text = "United Kingdom"/>
+    </LinearLayout>
+</ScrollView>

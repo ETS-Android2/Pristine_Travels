@@ -1,0 +1,149 @@
+<resources>
+    <string-array name="category_of_hotels">
+        <item>youth-hostel</item>
+        <item>5star</item>
+        <item>4star</item>
+        <item>3star</item>
+        <item>Boutique</item>
+        <item>7star</item>
+    </string-array>
+    <string-array name="places_options">
+        <item>USA</item>
+        <item>Canada</item>
+        <item>Australia</item>
+        <item>New Zealand</item>
+        <item>Dubai</item>
+        <item>England</item>
+        <item>UK</item>
+        <item>France</item>
+        <item>Germany</item>
+        <item>Italy</item>
+        <item>Switzerland</item>
+        <item>Thailand</item>
+        <item>Singapore</item>
+        <item>Malaysia</item>
+        <item>Ireland</item>
+        <item>Norway</item>
+        <item>Sweden</item>
+        <item>Bhutan</item>
+        <item>Spain</item>
+        <item>Portugal</item>
+        <item>Europe (south)</item>
+        <item>Europe (north)</item>
+        <item>Europe (custom)</item>
+        <item>Europe (east)</item>
+        <item>Russia</item>
+    </string-array>
+    <string name="app_name">Pristine Travels</string>
+    <string name="title_activity_contact_about_us">Contact_about_us</string>
+    <string name="title_activity_custom__itinerary">Custom_Itinerary</string>
+    <string name="title_activity_packages_available">Packages_available</string>
+    <string name="about_us_text">We are an IATA approved Travel Agency based in Kolkata established in 1997,
+        offering the most comprehensive service when it comes to travelling. Our prime products include\n\t\t
+        [1]Customized International Tour Packages\n\t\t
+        [2]Air Tickets\n\t\t
+        [3]Visa Consultancy\nOur office location is - Karnani Estate, 209 AJC Bose Road, 5th floor, Suite 194 Kolkata,West Bengal-700017. If
+        you have any queries do contact us. Our working hours are\n
+        Monday - Friday : 10 AM - 6 PM\n
+        Saturday : 10 AM - 2PM
+ </string>
+    <string name= "help_content">Don\'t worry if you don\'t understand what\'s happening here. Except for packing your bags,
+        we are here to help you all the way. Here\'s what you need to do\n
+        1. Fill in the country/continent with the duration, people travelling,along with your approximate budget.\n
+        2. Add ages of the children by separating them with a space. (Eg. for ages 12,14,9 write : 12 14 9
+        3. Choose specific destinations you want to visit, along with dates. (Eg - Barcelona 26/12/18 - 28/12/18)\n
+        4. Specify hotel category,add activities you wish to include. We will recommend any field left empty.\n
+        5. Just click on "Request Itinerary" and choose any email client which will send us the details of your choices.\n
+        Note - We will get back to you after receiving your mail,as soon as we can, and Hey! thanks for contacting us.
+    </string>
+    <string name="Australia_pack"></string>
+    <string name="New_Zealand_pack"></string>
+    <string name="America1_pack"></string>
+    <string name="America2_pack"></string>
+    <string name="Europe1_pack">4 COUNTRIES, 8 PLACES, 11 DAYS\n\n
+        Schedule : \n
+                  Day 0 : We leave for Paris ( Friday )\n\t
+                  Day 1 : We reach Paris 4 : 35\n\t\t
+                              Eiffel tower the same day.\n\t
+                  Day 2 : We see two of the aforementioned 4 places. If time permits, we see 3.\n\t
+                                   The Louvre\n\t\t
+                                   Notre Dame\n\t\t
+                                   Basilique du Sacré-Coeur\n\t\t
+                                   Pont Alexandre ||| Bridge \n\t\t
+                                   Night train to Chamonix ( Small Village )\n\t\t
+                  Day 3 : Day in Chamonix, climb the MOnt. Blanc mountain.
+                                   Stay there for the night, \n\t
+                  Day 4 : Roam around the town ,around noon leave for Geneva
+                                  reach there in less than 3 hours. If exhausted, we have a rest day, or we go and roam around the city,\n\t
+                  Day 5 : Around 4 we leave for Milan, stay in Milan\n\t
+                  Day 6 : In Milan, we roam around the city, We stay the night\n\t
+                  Day 7 : Morning train to Cinque terre, Roam around the city , staying there for the night.\n\t
+                  Day 8 : Leave for  Maranello in the morning. Look at the museums. At night, Train to Venice\n\t
+                  Day 9 : Venice, at night, if possible we take a train to Prague\n\t
+                  Day 10 : We stay at Prague Then we take the earliest flight back home, man.\n
+Places :\n
+\n
+1. Chamonix : A small village town in Southern France, amidst the Alps.\n
+2. Geneva :  A big city in Western Switzerland\n
+3. Milan : One of the very famous cities, of Italy. Must have heard of AC Milan and Inter Milan ( Football clubs )\n
+4. Cinque Terre : A small picturesque coastal town, by the beach.\n
+5. Maranello : This place doesn\'t need any introduction to you.\n
+6. Venice : One of the very beautiful medieval cities of Europe\n
+7. Prague : Another big city in the Czech-Republic.
+</string>
+    <string name="Europe2_pack"></string>
+    <string name="UK_pack"></string>
+    <string name="Singapore_pack"> 5 days Singapore
+PACKAGE cost per person Rs59800/-
+Includes :Accommodation with bf for 4 night
+Airport transfers and Sights seeing in Private coach
+Visa
+Air fare additional
+No booking has been held, hence prices are subject to change.
+5% GST extra.
+Day 01: BF at Hotel\n\t
+        Arrive  Singapore.\n\t
+        on Arrival, Private Transfer to Hotel ORCHARD PARADE with bf , for 04 Nights, on Bed and BF.\n\t
+        Nights Safari tour –. Private  Transfers\n
+Day 02: BF at Hotel\n\t
+        City Tour of Singapore, flyer\n\t
+        Gardens by the Bay Tour, inclusive 2 Domes.+ MBS Sky park Private  Transfers.\n
+Day 03: BF at Hotel\n\t
+        Morning Free\n\t
+        Afternoon, Sentosa at Sunset Tour. 1 way Cable Car, Wings of Time-2nd show, Sky and Luge Ride-2way;Images Of Singapore and Madame Tussauds+Sea Aquirium\n
+        Day 04: BF at Hotel\n\t
+Universal Studios And Trick Eye Museum Combo Ticket inclusive Private  Transfers.\n
+Day 05: BF at Hotel,\n\t
+        Morning free\n\t
+        Late Afternoon, Private Transfer to Singapore Airport, for return flight.
+    </string>
+    <string name="Dubai_pack"></string>
+    <string name="Thailand_pack">6 days Thailand
+        Package cost Rs37500 per person\n
+5% GST extra\n
+Usage of hotels as per standard hotel policy\n
+No service held on date, hence prices may vary, according to availability.
+        Day 01 Arrive Bangkok, post immigration transfer to Phuket hotel private coach., check into Phuket Deevana Patong as per standard timing, 1 unit
+        Deluxe room( Room area about 24 sq mts) with Bf factored for 3 nights.Evening pick up  for Phuket Fantasea Show, includes hotel pick and drop in shared coach.\n
+Day 02 Bf at Hotel.\n\t
+        Full day Phi Phi  Island Tour with lunch includes-Royal Jet Cruiser
+        hotel pick and drop and excursion in shared boat.(national Park fees of 400 THB per person extra to be settled on spot)\n
+Day 03 Bf at Hotel\n\t
+            Half day Phuket City tour shared coach\n
+Day 04 Bf at hotel.\n\t
+        Drop at Phuket  Airport private coach, fly for Bangkok on arrival transfers to Bangkok Hotel Arnoma grand  in private coach.
+        1  unit of Junior suite 42  sq mts room area with Bf factored at for 2 nights.\n
+Day 05 Bf at Hotel\n\t
+              Full day safari world or Dream world tour includes lunch with transfers on shared coach.\n
+Day 06 Bf at hotel\n\t
+        Entry to Sea life Aquarium and Madame Tussauds. Close to hotel no transfers factored hence.\n\t
+        Evening drop at Airport.\n\n
+Includes:\n
+Accommodation for 5 nights with Bf\n
+Airport Pick and Drop in private.\n
+Sightseeing as mentioned</string>
+    <string name="title_layout_help">Help\'s here</string>
+    <string name="number_of_adults">Number of Adults</string>
+    <string name="rooms_required">Rooms required</string>
+</resources>
+
