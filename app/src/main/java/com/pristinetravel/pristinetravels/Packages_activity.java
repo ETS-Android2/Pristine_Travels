@@ -16,7 +16,7 @@ import static android.view.View.INVISIBLE;
 import static android.view.View.VISIBLE;
 
 public class Packages_activity extends AppCompatActivity {
-    EditText et_childage,et_child,et_adults,et_rooms,et_date_to,et_date_from;
+    EditText et_childage,et_child,et_adults,et_rooms,et_date_from;
     Button bt_dub,bt_thai,bt_aus,bt_nz,bt_eu1,bt_eu2,bt_uk,bt_sing;
     Button but_change,but_confirm;
     public String details,title_pack;
@@ -25,7 +25,6 @@ public class Packages_activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_packages_activity);
         et_adults = (EditText)findViewById(R.id.et_number_adult);
-        et_date_to = (EditText)findViewById(R.id.et_date_to_pack);
         et_date_from = (EditText)findViewById(R.id.et_date_from_pack);
         et_child = (EditText)findViewById(R.id.et_child_pack);
         et_childage = (EditText)findViewById(R.id.et_childage_pack);
@@ -41,7 +40,6 @@ public class Packages_activity extends AppCompatActivity {
                 et_rooms.setEnabled(false);
                 et_adults.setEnabled(false);
                 et_date_from.setEnabled(false);
-                et_date_to.setEnabled(false);
             }
         });
         bt_thai = (Button) findViewById(R.id.but_Thai);
@@ -51,13 +49,12 @@ public class Packages_activity extends AppCompatActivity {
                 String people =" ."+ et_adults.getText().toString() + " adults and " + et_child.getText().toString() + " child(ren) having age " +
                         et_childage.getText().toString() + "will be travelling in lieu of which we will require " + et_rooms.getText().toString() + " rooms." +
                         " We wish to start our journey on "+
-                        et_date_from.getText().toString() + " to " + et_date_to.getText().toString();
+                        et_date_from.getText().toString();
                 details  = getString(R.string.Thailand_pack);
                 title_pack = "Thailand Package";
                 if(
                         TextUtils.isEmpty(et_adults.getText().toString()) ||
-                                TextUtils.isEmpty(et_date_from.getText().toString()) ||
-                                TextUtils.isEmpty(et_date_to.getText().toString())
+                                TextUtils.isEmpty(et_date_from.getText().toString())
                         )
                     Toast.makeText(Packages_activity.this," First add the number of people going ",0).show();
                 else{
@@ -72,13 +69,12 @@ public class Packages_activity extends AppCompatActivity {
                 String people =" ."+ et_adults.getText().toString() + " adults and " + et_child.getText().toString() + " child(ren) having age " +
                         et_childage.getText().toString() + "will be travelling in lieu of which we will require " + et_rooms.getText().toString() + " rooms." +
                         " We wish to start our journey on "+
-                        et_date_from.getText().toString() + " to " + et_date_to.getText().toString();
+                        et_date_from.getText().toString();
                 details  = getString(R.string.Singapore_pack);
                 title_pack = "Singapore package";
                 if(
                         TextUtils.isEmpty(et_adults.getText().toString()) ||
-                                TextUtils.isEmpty(et_date_from.getText().toString()) ||
-                                TextUtils.isEmpty(et_date_to.getText().toString())
+                                TextUtils.isEmpty(et_date_from.getText().toString())
                         )
                     Toast.makeText(Packages_activity.this," First add the number of people going ",0).show();
                 else{
@@ -93,13 +89,12 @@ public class Packages_activity extends AppCompatActivity {
                 String people =" ."+ et_adults.getText().toString() + " adults and " + et_child.getText().toString() + " child(ren) having age " +
                         et_childage.getText().toString() + "will be travelling in lieu of which we will require " + et_rooms.getText().toString() + " rooms." +
                         " We wish to start our journey on "+
-                        et_date_from.getText().toString() + " to " + et_date_to.getText().toString();
-                details  = getString(R.string.Dubai_pack);
-                title_pack = "Dubai package";
+                        et_date_from.getText().toString();
+                details  = getString(R.string.America1_pack);
+                title_pack = "America Package";
                 if(
                         TextUtils.isEmpty(et_adults.getText().toString()) ||
-                                TextUtils.isEmpty(et_date_from.getText().toString()) ||
-                                TextUtils.isEmpty(et_date_to.getText().toString())
+                                TextUtils.isEmpty(et_date_from.getText().toString())
                         )
                     Toast.makeText(Packages_activity.this," First add the number of people going ",0).show();
                 else{
@@ -114,14 +109,13 @@ public class Packages_activity extends AppCompatActivity {
                 String people =" ."+ et_adults.getText().toString() + " adults and " + et_child.getText().toString() + " child(ren) having age " +
                         et_childage.getText().toString() + "will be travelling in lieu of which we will require " + et_rooms.getText().toString() + " rooms." +
                         " We wish to start our journey on "+
-                        et_date_from.getText().toString() + " to " + et_date_to.getText().toString();
+                        et_date_from.getText().toString();
                 details = getString(R.string.Europe1_pack);
                 title_pack = "Europe 1 package";
                 if(
                         TextUtils.isEmpty(et_adults.getText().toString()) ||
-                                TextUtils.isEmpty(et_date_from.getText().toString()) ||
-                                TextUtils.isEmpty(et_date_to.getText().toString())
-                        )
+                                TextUtils.isEmpty(et_date_from.getText().toString())
+                                )
                     Toast.makeText(Packages_activity.this," First add the number of people going ",0).show();
                 else{
                     openDialog(details,people,title_pack);
@@ -135,13 +129,12 @@ public class Packages_activity extends AppCompatActivity {
                 String people =" ."+ et_adults.getText().toString() + " adults and " + et_child.getText().toString() + " child(ren) having age " +
                         et_childage.getText().toString() + "will be travelling in lieu of which we will require " + et_rooms.getText().toString() + " rooms." +
                         " We wish to start our journey on "+
-                        et_date_from.getText().toString() + " to " + et_date_to.getText().toString();
+                        et_date_from.getText().toString();
                 details = getString(R.string.Europe2_pack);
                 title_pack = "Europe package 2";
                 if(
                         TextUtils.isEmpty(et_adults.getText().toString()) ||
-                                TextUtils.isEmpty(et_date_from.getText().toString()) ||
-                                TextUtils.isEmpty(et_date_to.getText().toString())
+                                TextUtils.isEmpty(et_date_from.getText().toString())
                         )
                     Toast.makeText(Packages_activity.this," First add the number of people going ",0).show();
                 else{
@@ -156,13 +149,12 @@ public class Packages_activity extends AppCompatActivity {
                 String people =" ."+ et_adults.getText().toString() + " adults and " + et_child.getText().toString() + " child(ren) having age " +
                         et_childage.getText().toString() + "will be travelling in lieu of which we will require " + et_rooms.getText().toString() + " rooms." +
                         " We wish to start our journey on "+
-                        et_date_from.getText().toString() + " to " + et_date_to.getText().toString();
+                        et_date_from.getText().toString();
                 details = getString(R.string.UK_pack);
                 title_pack = "UK package";
                 if(
                         TextUtils.isEmpty(et_adults.getText().toString()) ||
-                                TextUtils.isEmpty(et_date_from.getText().toString()) ||
-                                TextUtils.isEmpty(et_date_to.getText().toString())
+                                TextUtils.isEmpty(et_date_from.getText().toString())
                         )
                     Toast.makeText(Packages_activity.this," First add the number of people going ",0).show();
                 else{
@@ -177,13 +169,12 @@ public class Packages_activity extends AppCompatActivity {
                 String people =" ."+ et_adults.getText().toString() + " adults and " + et_child.getText().toString() + " child(ren) having age " +
                         et_childage.getText().toString() + "will be travelling in lieu of which we will require " + et_rooms.getText().toString() + " rooms." +
                         " We wish to start our journey on "+
-                        et_date_from.getText().toString() + " to " + et_date_to.getText().toString();
+                        et_date_from.getText().toString();
                 details = getString(R.string.Australia_pack);
                 title_pack = "Australia Package";
                 if(
                         TextUtils.isEmpty(et_adults.getText().toString()) ||
-                                TextUtils.isEmpty(et_date_from.getText().toString()) ||
-                                TextUtils.isEmpty(et_date_to.getText().toString())
+                                TextUtils.isEmpty(et_date_from.getText().toString())
                         )
                     Toast.makeText(Packages_activity.this," First add the number of people going ",0).show();
                 else{
@@ -198,13 +189,12 @@ public class Packages_activity extends AppCompatActivity {
                 String people =" ."+ et_adults.getText().toString() + " adults and " + et_child.getText().toString() + " child(ren) having age " +
                         et_childage.getText().toString() + "will be travelling in lieu of which we will require " + et_rooms.getText().toString() + " rooms." +
                         " We wish to start our journey on "+
-                        et_date_from.getText().toString() + " to " + et_date_to.getText().toString();
+                        et_date_from.getText().toString();
                 details = getString(R.string.New_Zealand_pack);
                 title_pack = "New Zealand package";
                 if(
                         TextUtils.isEmpty(et_adults.getText().toString()) ||
-                                TextUtils.isEmpty(et_date_from.getText().toString()) ||
-                                TextUtils.isEmpty(et_date_to.getText().toString())
+                                TextUtils.isEmpty(et_date_from.getText().toString())
                         )
                     Toast.makeText(Packages_activity.this," First add the number of people going ",0).show();
                 else{
@@ -224,7 +214,6 @@ public class Packages_activity extends AppCompatActivity {
                 et_rooms.setEnabled(true);
                 et_adults.setEnabled(true);
                 et_date_from.setEnabled(true);
-                et_date_to.setEnabled(true);
             }
         });
     }

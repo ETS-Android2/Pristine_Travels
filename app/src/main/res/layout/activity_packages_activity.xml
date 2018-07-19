@@ -10,91 +10,76 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="#000000"
-        >
+        android:background="#000000">
         <LinearLayout
-            android:layout_weight="0.2"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:orientation="horizontal"
+            android:orientation= "vertical"
+            android:layout_weight="0.5"
             android:background="#FFFFFF">
-            <EditText
-                android:id = "@+id/et_number_adult"
-                android:layout_weight="0.3"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:hint = "@string/number_of_adults"
-                android:inputType="number"
-                android:textSize="14sp"/>
-
-            <EditText
-                android:id="@+id/et_rooms"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.4"
-                android:hint="@string/rooms_required"
-                android:inputType="number"
-                android:textSize="14sp" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_weight="0.2"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:orientation="horizontal"
-            android:background="#FFFFFF">
-            <EditText
-                android:id = "@+id/et_child_pack"
-                android:layout_width="0dp"
-                android:layout_weight="0.4"
-                android:layout_height="match_parent"
-                android:hint = "Number of Children"
-                android:textSize="14sp"
-                android:inputType="number"
-                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fill in these fields..."
+                android:textSize="18dp"
+                android:gravity="center_horizontal"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop = "5dp">
+                <EditText
+                    android:id = "@+id/et_number_adult"
+                    android:layout_weight="0.3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:hint = "@string/number_of_adults"
+                    android:inputType="number"
+                    android:textSize="14sp"/>
+                <EditText
+                    android:id = "@+id/et_child_pack"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.3"
+                    android:layout_height="match_parent"
+                    android:hint = "No. of Child(ren)"
+                    android:textSize="14sp"
+                    android:inputType="number"
+                    />
+            </LinearLayout>
             <EditText
                 android:id = "@+id/et_childage_pack"
-                android:layout_weight="0.6"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:textSize="12sp"
-                android:hint = "Child(ren) Age(seperate multiple with comma) "
-                />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.15"
-            android:orientation="horizontal"
-            android:background="#FFFFFF"
-            >
-            <TextView
-                android:id= "@+id/text_day_indicator"
-                android:layout_weight = "0.15"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:textColor="#000000"
-                android:text="Date - "/>
-            <EditText
-                android:id="@+id/et_date_from_pack"
-                android:layout_weight = "0.325"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="14sp"
-                android:inputType="date"
+                android:layout_marginTop= "5dp"
+                android:hint = "@string/hint_d"
                 />
-            <TextView
-                android:layout_weight="0.2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text = " to "/>
-            <EditText
-                android:id="@+id/et_date_to_pack"
-                android:layout_weight = "0.325"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:textSize="14sp"
-                android:inputType="date"
-                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:orientation="horizontal"
+                android:layout_marginTop = "5dp"
+                android:background="#FFFFFF"
+                >
+                <EditText
+                    android:id="@+id/et_date_from_pack"
+                    android:layout_weight = "0.5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:inputType="date"
+                    android:hint = "@string/start_date"
+                    />
+                <EditText
+                    android:id="@+id/et_rooms"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:hint="@string/rooms_required"
+                    android:inputType="number"
+                    android:textSize="14sp" />
+            </LinearLayout>
         </LinearLayout>
         <RelativeLayout
             android:layout_width="match_parent"
@@ -119,7 +104,7 @@
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             android:gravity="center"
-            android:text = " READY-MADE PACKAGES "/>
+            android:text = " POPULAR - PACKAGES "/>
         <Button
             android:id = "@+id/but_Aus"
             android:layout_width="match_parent"
@@ -147,7 +132,7 @@
             android:layout_height="60dp"
             android:background="?android:attr/selectableItemBackground"
             android:textColor = "#FFFFFF"
-            android:text="Dubai"/>
+            android:text="America"/>
         <Button
             android:id = "@+id/but_Thai"
             android:layout_width="match_parent"
