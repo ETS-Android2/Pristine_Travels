@@ -17,7 +17,6 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 public class application_page extends AppCompatActivity {
 
     private ImageButton about_us, custom, packages;
-    public ViewFlipper v_cust, v_pack, v_about;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,21 +29,6 @@ public class application_page extends AppCompatActivity {
                 open_next(Contact_about_us.class);
             }
         });
-        int image_cust[] = {R.drawable.itin,R.drawable.customized };
-        int image_pack[] = {R.drawable.packages, R.drawable.pop};
-        int image_about[] = {R.drawable.about_us, R.drawable.about};
-        v_cust = findViewById(R.id.vf_custom);
-        for (int image : image_cust) {
-            flip_setting(image, v_cust, 2000);
-        }
-        v_pack = findViewById(R.id.vf_pack);
-        for (int image : image_pack) {
-            flip_setting(image, v_pack, 4000);
-        }
-        v_about = findViewById(R.id.vf_about);
-        for (int image : image_about) {
-            flip_setting(image, v_about, 8000);
-        }
         custom = (ImageButton) findViewById(R.id.imagebutton_custom);
         custom.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,18 +50,4 @@ public class application_page extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void flip_setting(int image, ViewFlipper v_flip, int time_d) {
-        ImageView imgview = new ImageView(this);
-        Glide
-                .with(this)
-                .load(image)
-                .skipMemoryCache(true)
-                .diskCacheStrategy(DiskCacheStrategy.NONE)
-                .into(imgview);
-        v_flip.addView(imgview);
-        v_flip.setFlipInterval(time_d);
-        v_flip.setAutoStart(true);
-        v_flip.setInAnimation(this, android.R.anim.slide_in_left);
-        v_flip.setOutAnimation(this, android.R.anim.slide_out_right);
-    }
 }

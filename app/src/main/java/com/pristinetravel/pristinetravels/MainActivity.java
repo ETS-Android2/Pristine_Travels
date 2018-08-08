@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        int images[] = {R.drawable.secong,R.drawable.third,R.drawable.fourth,R.drawable.secong,R.drawable.fifth,R.drawable.first};
+        int images[] = {R.drawable.secong,R.drawable.third,R.drawable.fourth,R.drawable.fifth};
         v_flip = findViewById(R.id.viewflip);
         v_flip.setOnTouchListener(new View.OnTouchListener() {
             @Override
