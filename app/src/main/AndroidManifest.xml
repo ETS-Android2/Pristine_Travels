@@ -26,7 +26,10 @@
             android:name=".Custom_Itinerary"
             android:label="@string/title_activity_custom__itinerary"
             android:theme="@style/AppTheme" />
-        <activity android:name=".Packages_activity"></activity>
+        <activity
+            android:name=".Packages_activity"
+            android:label="@string/title_activity_packages_available"
+            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>

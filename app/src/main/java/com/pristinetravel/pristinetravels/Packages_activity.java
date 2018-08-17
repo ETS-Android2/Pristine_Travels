@@ -1,5 +1,6 @@
 package com.pristinetravel.pristinetravels;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -16,208 +17,88 @@ import static android.view.View.INVISIBLE;
 import static android.view.View.VISIBLE;
 
 public class Packages_activity extends AppCompatActivity {
-    EditText et_childage,et_child,et_adults,et_rooms,et_date_from;
-    Button bt_dub,bt_thai,bt_aus,bt_nz,bt_eu1,bt_eu2,bt_uk,bt_sing;
-    Button but_change,but_confirm;
-    public String details,title_pack;
+    Button bt_amer,bt_thai,bt_aus,bt_nz,bt_eu1,bt_eu2,bt_uk,bt_sing;
+    EditText et_age,et_name,et_date ;
+    public String details,title_pack,book_dets;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_packages_activity);
-        et_adults = (EditText)findViewById(R.id.et_number_adult);
-        et_date_from = (EditText)findViewById(R.id.et_date_from_pack);
-        et_child = (EditText)findViewById(R.id.et_child_pack);
-        et_childage = (EditText)findViewById(R.id.et_childage_pack);
-        et_rooms = (EditText)findViewById(R.id.et_rooms);
-        but_confirm = (Button) findViewById(R.id.but_conf_pack);
-        but_confirm.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                but_confirm.setVisibility(INVISIBLE);
-                but_change.setVisibility( VISIBLE);
-                et_childage.setEnabled(false);
-                et_child.setEnabled(false);
-                et_rooms.setEnabled(false);
-                et_adults.setEnabled(false);
-                et_date_from.setEnabled(false);
-            }
-        });
-        bt_thai = (Button) findViewById(R.id.but_Thai);
+        bt_thai = (Button) findViewById(R.id.but_thai);
         bt_thai.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String people =" ."+ et_adults.getText().toString() + " adults and " + et_child.getText().toString() + " child(ren) having age " +
-                        et_childage.getText().toString() + "will be travelling in lieu of which we will require " + et_rooms.getText().toString() + " rooms." +
-                        " We wish to start our journey on "+
-                        et_date_from.getText().toString();
                 details  = getString(R.string.Thailand_pack);
                 title_pack = "Thailand Package";
-                if(
-                        TextUtils.isEmpty(et_adults.getText().toString()) ||
-                                TextUtils.isEmpty(et_date_from.getText().toString())
-                        )
-                    Toast.makeText(Packages_activity.this," First add the number of people going ",0).show();
-                else{
-                    openDialog(details,people,title_pack);
-                }
+                openDialog(details,title_pack);
             }
         });
         bt_sing = (Button) findViewById(R.id.but_Sing);
         bt_sing.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String people =" ."+ et_adults.getText().toString() + " adults and " + et_child.getText().toString() + " child(ren) having age " +
-                        et_childage.getText().toString() + "will be travelling in lieu of which we will require " + et_rooms.getText().toString() + " rooms." +
-                        " We wish to start our journey on "+
-                        et_date_from.getText().toString();
                 details  = getString(R.string.Singapore_pack);
                 title_pack = "Singapore package";
-                if(
-                        TextUtils.isEmpty(et_adults.getText().toString()) ||
-                                TextUtils.isEmpty(et_date_from.getText().toString())
-                        )
-                    Toast.makeText(Packages_activity.this," First add the number of people going ",0).show();
-                else{
-                    openDialog(details,people,title_pack);
-                }
+                openDialog(details,title_pack);
             }
         });
-        bt_dub = (Button) findViewById(R.id.but_Dub);
-        bt_dub.setOnClickListener(new View.OnClickListener() {
+        bt_amer = (Button) findViewById(R.id.but_Amer);
+        bt_amer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String people =" ."+ et_adults.getText().toString() + " adults and " + et_child.getText().toString() + " child(ren) having age " +
-                        et_childage.getText().toString() + "will be travelling in lieu of which we will require " + et_rooms.getText().toString() + " rooms." +
-                        " We wish to start our journey on "+
-                        et_date_from.getText().toString();
                 details  = getString(R.string.America1_pack);
                 title_pack = "America Package";
-                if(
-                        TextUtils.isEmpty(et_adults.getText().toString()) ||
-                                TextUtils.isEmpty(et_date_from.getText().toString())
-                        )
-                    Toast.makeText(Packages_activity.this," First add the number of people going ",0).show();
-                else{
-                    openDialog(details,people,title_pack);
-                }
+                openDialog(details,title_pack);
             }
         });
         bt_eu1 = (Button) findViewById(R.id.but_Eur1);
         bt_eu1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String people =" ."+ et_adults.getText().toString() + " adults and " + et_child.getText().toString() + " child(ren) having age " +
-                        et_childage.getText().toString() + "will be travelling in lieu of which we will require " + et_rooms.getText().toString() + " rooms." +
-                        " We wish to start our journey on "+
-                        et_date_from.getText().toString();
                 details = getString(R.string.Europe1_pack);
                 title_pack = "Europe 1 package";
-                if(
-                        TextUtils.isEmpty(et_adults.getText().toString()) ||
-                                TextUtils.isEmpty(et_date_from.getText().toString())
-                                )
-                    Toast.makeText(Packages_activity.this," First add the number of people going ",0).show();
-                else{
-                    openDialog(details,people,title_pack);
-                }
+                openDialog(details,title_pack);
             }
         });
         bt_eu2 = (Button) findViewById(R.id.but_Eur2);
         bt_eu2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String people =" ."+ et_adults.getText().toString() + " adults and " + et_child.getText().toString() + " child(ren) having age " +
-                        et_childage.getText().toString() + "will be travelling in lieu of which we will require " + et_rooms.getText().toString() + " rooms." +
-                        " We wish to start our journey on "+
-                        et_date_from.getText().toString();
                 details = getString(R.string.Europe2_pack);
                 title_pack = "Europe package 2";
-                if(
-                        TextUtils.isEmpty(et_adults.getText().toString()) ||
-                                TextUtils.isEmpty(et_date_from.getText().toString())
-                        )
-                    Toast.makeText(Packages_activity.this," First add the number of people going ",0).show();
-                else{
-                    openDialog(details,people,title_pack);
-                }
+                openDialog(details,title_pack);
             }
         });
         bt_uk = (Button) findViewById(R.id.but_UK);
         bt_uk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String people =" ."+ et_adults.getText().toString() + " adults and " + et_child.getText().toString() + " child(ren) having age " +
-                        et_childage.getText().toString() + "will be travelling in lieu of which we will require " + et_rooms.getText().toString() + " rooms." +
-                        " We wish to start our journey on "+
-                        et_date_from.getText().toString();
                 details = getString(R.string.UK_pack);
                 title_pack = "UK package";
-                if(
-                        TextUtils.isEmpty(et_adults.getText().toString()) ||
-                                TextUtils.isEmpty(et_date_from.getText().toString())
-                        )
-                    Toast.makeText(Packages_activity.this," First add the number of people going ",0).show();
-                else{
-                    openDialog(details,people,title_pack);
-                }
+                openDialog(details,title_pack);
+
             }
         });
         bt_aus = (Button) findViewById(R.id.but_Aus);
         bt_aus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String people =" ."+ et_adults.getText().toString() + " adults and " + et_child.getText().toString() + " child(ren) having age " +
-                        et_childage.getText().toString() + "will be travelling in lieu of which we will require " + et_rooms.getText().toString() + " rooms." +
-                        " We wish to start our journey on "+
-                        et_date_from.getText().toString();
                 details = getString(R.string.Australia_pack);
                 title_pack = "Australia Package";
-                if(
-                        TextUtils.isEmpty(et_adults.getText().toString()) ||
-                                TextUtils.isEmpty(et_date_from.getText().toString())
-                        )
-                    Toast.makeText(Packages_activity.this," First add the number of people going ",0).show();
-                else{
-                    openDialog(details,people,title_pack);
-                }
+                openDialog(details,title_pack);
             }
         });
-        bt_nz = (Button) findViewById(R.id.but_NZ);
+        bt_nz = (Button) findViewById(R.id.but_nz);
         bt_nz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String people =" ."+ et_adults.getText().toString() + " adults and " + et_child.getText().toString() + " child(ren) having age " +
-                        et_childage.getText().toString() + "will be travelling in lieu of which we will require " + et_rooms.getText().toString() + " rooms." +
-                        " We wish to start our journey on "+
-                        et_date_from.getText().toString();
                 details = getString(R.string.New_Zealand_pack);
                 title_pack = "New Zealand package";
-                if(
-                        TextUtils.isEmpty(et_adults.getText().toString()) ||
-                                TextUtils.isEmpty(et_date_from.getText().toString())
-                        )
-                    Toast.makeText(Packages_activity.this," First add the number of people going ",0).show();
-                else{
-                    openDialog(details,people,title_pack);
-                }
-            }
-        });
-        but_change = (Button) findViewById(R.id.but_change_pack);
-        but_change.setVisibility(INVISIBLE);
-        but_change.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                but_change.setVisibility(INVISIBLE);
-                but_confirm.setVisibility( VISIBLE);
-                et_childage.setEnabled(true);
-                et_child.setEnabled(true);
-                et_rooms.setEnabled(true);
-                et_adults.setEnabled(true);
-                et_date_from.setEnabled(true);
+                    openDialog(details,title_pack);
             }
         });
     }
-    public void openDialog(final String package_det, final String dets, final String title_pack){
+    public void openDialog(final String package_det, final String title_pack){
         AlertDialog.Builder builder = new AlertDialog.Builder(Packages_activity.this);
         View layout_view = getLayoutInflater().inflate(R.layout.dialog_layout,null);
         TextView tv_title = (TextView) layout_view.findViewById(R.id.tV_title);
@@ -226,7 +107,7 @@ public class Packages_activity extends AppCompatActivity {
         but_invis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                sendmessage(title_pack,dets);
+                add_details(title_pack);
             }
         });
         tv_title.setText(" Pacakage details - ");
@@ -235,21 +116,54 @@ public class Packages_activity extends AppCompatActivity {
         AlertDialog alert = builder.create();
         alert.show();
     }
+    public void add_details(String title_pack){
 
-    public void sendmessage(String pack_dets,String dets){
-        String temp = " Hello there, \n This is a message for confirmation of the booking of the package " +
-                pack_dets + "\n" + dets;
+        AlertDialog.Builder builder2 = new AlertDialog.Builder(Packages_activity.this);
+        View layout_view2 = getLayoutInflater().inflate(R.layout.add_people_layout,null);
+        Button add_people = (Button) layout_view2.findViewById(R.id.button_add);
+        et_age = (EditText) layout_view2.findViewById(R.id.editTextage);
+        et_name = (EditText) layout_view2.findViewById(R.id.editText_name);
+        et_date = (EditText) layout_view2.findViewById(R.id.editText_stdate);
+        book_dets = "This is a message for the request of the booking of the package offered by you in your app  " +
+                title_pack + "\n" + "\n The details of "+
+                " the passengers travelling are - \n";
+        add_people.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                book_dets = book_dets + et_name.getText().toString() + " of age - " + et_age.getText().toString() + "\n" ;
+                et_name.setText("");
+                et_age.setText("");
+                // Get the text add it to the string..
+            }
+        });
+        Button book_final = (Button)layout_view2.findViewById(R.id.button_book);
+        book_final.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                book_dets = book_dets + et_name.getText().toString() + " of age - " + et_age.getText().toString() + "\n"+
+                    " We would like to start on  " + et_date.getText().toString();
+                sendmessage(book_dets);
+            }
+        });
+        builder2.setView(layout_view2);
+        AlertDialog alert = builder2.create();
+        alert.show();
+    }
+
+    @SuppressLint("WrongConstant")
+    public void sendmessage(String pack_dets){
+
         //package name to be added, people travelling added.
         Intent emailntent = new Intent(Intent.ACTION_SEND);
         emailntent.setType("message/rfc822");
         emailntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"sarrof@yahoo.co.uk"});
         //emailntent.putExtra(Intent.EXTRA_CC, new String[]{"yashrajsarrof18121998@gmail.com"});
         emailntent.putExtra(Intent.EXTRA_SUBJECT,"Booking request ");
-        emailntent.putExtra(Intent.EXTRA_TEXT,temp);
+        emailntent.putExtra(Intent.EXTRA_TEXT,pack_dets);
         try{
             startActivity(Intent.createChooser(emailntent," Choose Email Client ..."));
         }catch(android.content.ActivityNotFoundException ex){
-            Toast.makeText(Packages_activity.this,"NO email clients installed",0).show();
+            Toast.makeText(Packages_activity.this,"NO email clients installed", 0).show();
         }
     }
 }

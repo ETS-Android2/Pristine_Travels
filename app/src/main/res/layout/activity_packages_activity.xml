@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView android:layout_width="match_parent"
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -9,157 +10,713 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="#000000">
-        <LinearLayout
+        android:orientation="vertical">
+
+        <View
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:orientation= "vertical"
-            android:layout_weight="0.5"
-            android:background="#FFFFFF">
+            android:layout_height="1dp"
+            android:background="@android:color/black"></View>
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="256dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/aus_pack"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/but_Aus"
+                style="@android:style/Widget.Button.Small"
+                android:layout_width="76dp"
+                android:layout_height="32dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/colorAccent"
+                android:text="Details"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textColor="#ffffff"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageView"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Fill in these fields..."
-                android:textSize="18dp"
-                android:gravity="center_horizontal"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop = "5dp">
-                <EditText
-                    android:id = "@+id/et_number_adult"
-                    android:layout_weight="0.3"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:hint = "@string/number_of_adults"
-                    android:inputType="number"
-                    android:textSize="14sp"/>
-                <EditText
-                    android:id = "@+id/et_child_pack"
-                    android:layout_width="0dp"
-                    android:layout_weight="0.3"
-                    android:layout_height="match_parent"
-                    android:hint = "No. of Child(ren)"
-                    android:textSize="14sp"
-                    android:inputType="number"
-                    />
-            </LinearLayout>
-            <EditText
-                android:id = "@+id/et_childage_pack"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="14sp"
-                android:layout_marginTop= "5dp"
-                android:hint = "@string/hint_d"
-                />
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="0.5"
-                android:orientation="horizontal"
-                android:layout_marginTop = "5dp"
-                android:background="#FFFFFF"
-                >
-                <EditText
-                    android:id="@+id/et_date_from_pack"
-                    android:layout_weight = "0.5"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:textSize="14sp"
-                    android:inputType="date"
-                    android:hint = "@string/start_date"
-                    />
-                <EditText
-                    android:id="@+id/et_rooms"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:hint="@string/rooms_required"
-                    android:inputType="number"
-                    android:textSize="14sp" />
-            </LinearLayout>
-        </LinearLayout>
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:background="#FFFFFF">
-            <Button
-                android:id="@+id/but_conf_pack"
+                android:id="@+id/textView"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Confirm"/>
+                android:layout_height="26dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Australia 6-Days 7-Nights"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/but_Aus"
+                app:layout_constraintEnd_toStartOf="@+id/imageView"
+                app:layout_constraintHorizontal_bias="0.368"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.444" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="80dp"
+                android:layout_height="26dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Start : Perth"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/but_Aus"
+                app:layout_constraintHorizontal_bias="0.101"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="120dp"
+                android:layout_height="33dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:text="End : Melbourne"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/but_Aus"
+                app:layout_constraintHorizontal_bias="0.859"
+                app:layout_constraintStart_toEndOf="@+id/textView2" />
+        </android.support.constraint.ConstraintLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"></View>
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <ImageView
+                android:id="@+id/imageViewnz"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="256dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/nz_pack"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
             <Button
-                android:id="@+id/but_change_pack"
+                android:id="@+id/but_nz"
+                style="@android:style/Widget.Button.Small"
+                android:layout_width="76dp"
+                android:layout_height="32dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/colorAccent"
+                android:text="Details"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textColor="#ffffff"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageViewnz"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/textViewnz"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.05"
-                android:text="Change"/>
-        </RelativeLayout>
-        <TextView
+                android:layout_height="26dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                android:text=" New Zealand 8-Days 7-Nights"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/but_nz"
+                app:layout_constraintEnd_toStartOf="@+id/imageViewnz"
+                app:layout_constraintHorizontal_bias="0.368"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.444" />
+
+            <TextView
+                android:id="@+id/textViewnz2"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Start : Auckland"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/but_nz"
+                app:layout_constraintHorizontal_bias="0.101"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewnz"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/textViewnz3"
+                android:layout_width="wrap_content"
+                android:layout_height="33dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="End : Queenstown"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/but_nz"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/textViewnz2"
+                app:layout_constraintTop_toTopOf="@+id/textViewnz2"
+                app:layout_constraintVertical_bias="1.0" />
+        </android.support.constraint.ConstraintLayout>
+
+        <View
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp"
-            android:gravity="center"
-            android:text = " POPULAR - PACKAGES "/>
-        <Button
-            android:id = "@+id/but_Aus"
+            android:layout_height="1dp"
+            android:background="@android:color/black" />
+        <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:background="?android:attr/selectableItemBackground"
-            android:textColor = "#FFFFFF"
-            android:text="Australia"/>
-        <Button
-            android:id = "@+id/but_NZ"
+            android:layout_height="100dp">
+
+            <ImageView
+                android:id="@+id/imageViewSing"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="256dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/sing_pack"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/but_Sing"
+                style="@android:style/Widget.Button.Small"
+                android:layout_width="76dp"
+                android:layout_height="32dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/colorAccent"
+                android:text="Details"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textColor="#ffffff"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageViewSing"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/textViewSing"
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Singapore 5-Days 6-Nights"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/but_Sing"
+                app:layout_constraintEnd_toStartOf="@+id/imageViewSing"
+                app:layout_constraintHorizontal_bias="0.4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/textView2Sing"
+                android:layout_width="wrap_content"
+                android:layout_height="23dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text=" Madamme Tussauds, Universal Studios"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/but_Sing"
+                app:layout_constraintHorizontal_bias="0.121"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewSing"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/textView3Sing"
+                android:layout_width="wrap_content"
+                android:layout_height="33dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:text="and much more!!"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/but_Sing"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/textView2Sing" />
+        </android.support.constraint.ConstraintLayout>
+
+        <View
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:background="?android:attr/selectableItemBackground"
-            android:textColor = "#FFFFFF"
-            android:text="New Zealand"/>
-        <Button
-            android:id = "@+id/but_Sing"
+            android:layout_height="1dp"
+            android:background="@android:color/black" />
+        <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:background="?android:attr/selectableItemBackground"
-            android:textColor = "#FFFFFF"
-            android:text="Singapore"/>
-        <Button
-            android:id="@+id/but_Dub"
+            android:layout_height="100dp">
+
+            <ImageView
+                android:id="@+id/imageViewAmer"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="256dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/amer_pack"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/but_Amer"
+                style="@android:style/Widget.Button.Small"
+                android:layout_width="76dp"
+                android:layout_height="32dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/colorAccent"
+                android:text="Details"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textColor="#ffffff"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageViewAmer"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/textViewAmer"
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                android:text=" America 14 Days 14 Nights"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/but_Amer"
+                app:layout_constraintEnd_toStartOf="@+id/imageViewAmer"
+                app:layout_constraintHorizontal_bias="0.368"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.444" />
+
+            <TextView
+                android:id="@+id/textViewAmer2"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Start : Los Angeles"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/but_Amer"
+                app:layout_constraintHorizontal_bias="0.101"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewAmer"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/textViewAmer3"
+                android:layout_width="wrap_content"
+                android:layout_height="33dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="End : Atlanta"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/but_Amer"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/textViewAmer2"
+                app:layout_constraintTop_toTopOf="@+id/textViewAmer2"
+                app:layout_constraintVertical_bias="1.0" />
+        </android.support.constraint.ConstraintLayout>
+
+        <View
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:background="?android:attr/selectableItemBackground"
-            android:textColor = "#FFFFFF"
-            android:text="America"/>
-        <Button
-            android:id = "@+id/but_Thai"
+            android:layout_height="1dp"
+            android:background="@android:color/black" />
+        <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:background="?android:attr/selectableItemBackground"
-            android:textColor = "#FFFFFF"
-            android:text="Thailand"/>
-        <Button
-            android:id = "@+id/but_Eur1"
+            android:layout_height="100dp">
+
+            <ImageView
+                android:id="@+id/imageViewThai"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="256dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/thai_pack"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/but_thai"
+                style="@android:style/Widget.Button.Small"
+                android:layout_width="76dp"
+                android:layout_height="32dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/colorAccent"
+                android:text="Details"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textColor="#ffffff"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageViewThai"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/textViewthai"
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                android:text=" Thailand 6-Days 6-Nights"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/but_thai"
+                app:layout_constraintEnd_toStartOf="@+id/imageViewThai"
+                app:layout_constraintHorizontal_bias="0.368"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.444" />
+
+            <TextView
+                android:id="@+id/textViewthai2"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Start : Phuket"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/but_thai"
+                app:layout_constraintHorizontal_bias="0.101"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewthai"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/textViewthai3"
+                android:layout_width="wrap_content"
+                android:layout_height="33dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="End : Bangkok"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/but_thai"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/textViewthai2"
+                app:layout_constraintTop_toTopOf="@+id/textViewthai2"
+                app:layout_constraintVertical_bias="1.0" />
+        </android.support.constraint.ConstraintLayout>
+
+        <View
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:background="?android:attr/selectableItemBackground"
-            android:textColor = "#FFFFFF"
-            android:text="Western Europe"/>
-        <Button
-            android:id = "@+id/but_Eur2"
+            android:layout_height="1dp"
+            android:background="@android:color/black" />
+        <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:background="?android:attr/selectableItemBackground"
-            android:textColor = "#FFFFFF"
-            android:text="Eastern Europe"/>
-        <Button
-            android:id = "@+id/but_UK"
+            android:layout_height="100dp">
+
+            <ImageView
+                android:id="@+id/imageViewEur1"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="256dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/eur1_pack"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/but_Eur1"
+                style="@android:style/Widget.Button.Small"
+                android:layout_width="76dp"
+                android:layout_height="32dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/colorAccent"
+                android:text="Details"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textColor="#ffffff"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageViewEur1"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/textViewEur1"
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                android:text=" Europe 11-Days 12-Nights"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/but_Eur1"
+                app:layout_constraintEnd_toStartOf="@+id/imageViewEur1"
+                app:layout_constraintHorizontal_bias="0.368"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.444" />
+
+            <TextView
+                android:id="@+id/textViewEur12"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Start : Paris"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/but_Eur1"
+                app:layout_constraintHorizontal_bias="0.101"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewEur1"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/textViewEur13"
+                android:layout_width="wrap_content"
+                android:layout_height="33dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="End : Prague"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/but_Eur1"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/textViewEur12"
+                app:layout_constraintTop_toTopOf="@+id/textViewEur12"
+                app:layout_constraintVertical_bias="1.0" />
+        </android.support.constraint.ConstraintLayout>
+
+        <View
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:background="?android:attr/selectableItemBackground"
-            android:textColor = "#FFFFFF"
-            android:text = "United Kingdom"/>
+            android:layout_height="1dp"
+            android:background="@android:color/black" />
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <ImageView
+                android:id="@+id/imageViewEur2"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="256dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/eur2_pack"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/but_Eur2"
+                style="@android:style/Widget.Button.Small"
+                android:layout_width="76dp"
+                android:layout_height="32dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/colorAccent"
+                android:text="Details"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textColor="#ffffff"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageViewEur2"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/textViewEur2"
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                android:text=" Europe 7-Days 8-Nights"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/but_Eur2"
+                app:layout_constraintEnd_toStartOf="@+id/imageViewEur2"
+                app:layout_constraintHorizontal_bias="0.368"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.444" />
+
+            <TextView
+                android:id="@+id/textViewEur22"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Start : Paris"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/but_Eur2"
+                app:layout_constraintHorizontal_bias="0.101"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewEur2"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/textViewEur23"
+                android:layout_width="wrap_content"
+                android:layout_height="33dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="End : Lucerne"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/but_Eur2"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/textViewEur22"
+                app:layout_constraintTop_toTopOf="@+id/textViewEur22"
+                app:layout_constraintVertical_bias="1.0" />
+        </android.support.constraint.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black" />
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <ImageView
+                android:id="@+id/imageViewUK"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="256dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/uk_pack"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/but_UK"
+                style="@android:style/Widget.Button.Small"
+                android:layout_width="76dp"
+                android:layout_height="32dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/colorAccent"
+                android:text="Details"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textColor="#ffffff"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageViewUK"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/textViewUK"
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                android:text=" United Kingdom 6-Days "
+                android:textSize="19sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/but_UK"
+                app:layout_constraintEnd_toStartOf="@+id/imageViewUK"
+                app:layout_constraintHorizontal_bias="0.368"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.444" />
+
+            <TextView
+                android:id="@+id/textViewUK2"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Start : London"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/but_UK"
+                app:layout_constraintHorizontal_bias="0.101"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewUK"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/textViewUK3"
+                android:layout_width="wrap_content"
+                android:layout_height="33dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="End : Edinburgh"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/but_UK"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/textViewUK2"
+                app:layout_constraintTop_toTopOf="@+id/textViewUK2"
+                app:layout_constraintVertical_bias="1.0" />
+        </android.support.constraint.ConstraintLayout>
     </LinearLayout>
 </ScrollView>

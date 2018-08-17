@@ -35,9 +35,9 @@
         <item>Russia</item>
     </string-array>
     <string name="app_name">Pristine Travels</string>
-    <string name="title_activity_contact_about_us">Contact_about_us</string>
-    <string name="title_activity_custom__itinerary">Custom_Itinerary</string>
-    <string name="title_activity_packages_available">Packages_available</string>
+    <string name="title_activity_contact_about_us">Contact Us</string>
+    <string name="title_activity_custom__itinerary">Customize your Itinerary</string>
+    <string name="title_activity_packages_available">Popular Packages</string>
     <string name="about_us_text">We are an IATA approved Travel Agency based in Kolkata established in 1997,
         offering the most comprehensive service when it comes to travelling. Our prime products include\n\t\t
         [1]Customized International Tour Packages\n\t\t
