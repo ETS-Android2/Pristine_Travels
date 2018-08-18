@@ -1,5 +1,6 @@
 package com.pristinetravel.pristinetravels;
 
+import android.annotation.SuppressLint;
 import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -31,13 +32,15 @@ public class Custom_Itinerary extends AppCompatActivity {
     AutoCompleteTextView actv_place,actv_days,actv_hotels;
     String[] places_option;
     String[] category;
+    public String book_dets;
     ArrayAdapter<String> adap_places,category_hotels;
     Button but_confirm,but_change,but_finish,but_next,but_back;
     ImageButton btn_help;
     StringBuilder emailbody;
     public int page_number = 0 ;
     String[] activities_selected, places_selected,hotels_selected,dates_selected;
-    EditText et_activity,et_place,et_date_to,et_date_from,et_budget,et_adults,et_child,et_rooms,et_childage;
+    EditText et_activity,et_place,et_date_to,et_date_from,et_budget,et_rooms,et_age,et_name,et_date;
+    TextView tv_dis;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,9 +58,6 @@ public class Custom_Itinerary extends AppCompatActivity {
         Arrays.fill(dates_selected,"");
         btn_help = (ImageButton) findViewById(R.id.imgbtn_help);
         et_budget = (EditText) findViewById(R.id.et_budget);
-        et_adults = (EditText) findViewById(R.id.et_adults_trv);
-        et_child = (EditText) findViewById(R.id.et_child_trv);
-        et_childage = (EditText) findViewById(R.id.et_childage);
         et_rooms = (EditText) findViewById(R.id.et_rooms_req);
         et_activity = (EditText) findViewById(R.id.et_activity);
         et_place = (EditText) findViewById(R.id.et_place);
@@ -100,11 +100,8 @@ public class Custom_Itinerary extends AppCompatActivity {
                 but_confirm.setVisibility( VISIBLE);
                 actv_place.setEnabled(true);
                 actv_days.setEnabled(true);
-                et_childage.setEnabled(true);
-                et_child.setEnabled(true);
                 et_rooms.setEnabled(true);
                 et_budget.setEnabled(true);
-                et_adults.setEnabled(true);
             }
         });
         but_confirm.setOnClickListener(new View.OnClickListener() {
@@ -114,11 +111,8 @@ public class Custom_Itinerary extends AppCompatActivity {
                 but_change.setVisibility( VISIBLE);
                 actv_place.setEnabled(false);
                 actv_days.setEnabled(false);
-                et_childage.setEnabled(false);
-                et_child.setEnabled(false);
                 et_rooms.setEnabled(false);
                 et_budget.setEnabled(false);
-                et_adults.setEnabled(false);
             }
         });
         but_next.setOnClickListener(new View.OnClickListener() {
@@ -158,34 +152,70 @@ public class Custom_Itinerary extends AppCompatActivity {
         but_finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String details = "";
                 String temp = " Hello there, \n This is a request for an itinerary for "
-                        + actv_days.getText().toString() + " in " + actv_place.getText().toString() + ". The people" +
-                        "travelling include " + et_child.getText().toString() + " child(ren) with age(s)"
-                        + et_childage.getText().toString() + " and "
-                        + et_adults.getText().toString() + " adult(s)." +
+                        + actv_days.getText().toString() + " days in " + actv_place.getText().toString()+
                         " We require "+ et_rooms.getText().toString() + " rooms, in all of our stays. Our approximate" +
-                        "budget is -" + et_budget.getText().toString()+
+                        "budget per person is -" + et_budget.getText().toString()+
                         "\n\n We would like for the following to be included in the itinerary - \n\n";
-                emailbody.append(temp);
+                details = details + temp;
                 int i;
                 for (i = 0;i<= page_number; i++){
                     temp = String.format(" %d. Place - %s\n%s to %s\nHotel preference - %s\nActivies to be included - %s\n\n",i+1,
                             places_selected[i],dates_selected[i],dates_selected[i+1],hotels_selected[i],activities_selected[i]);
-                    emailbody.append(temp);
+                    details = details + temp;
                 }
-                Intent emailntent = new Intent(Intent.ACTION_SEND);
-                emailntent.setType("message/rfc822");
-                emailntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"sarrof@yahoo.co.uk"});
-                //emailntent.putExtra(Intent.EXTRA_CC, new String[]{"yashrajsarrof18121998@gmail.com"});
-                emailntent.putExtra(Intent.EXTRA_SUBJECT,"Request Itinerary ");
-                emailntent.putExtra(Intent.EXTRA_TEXT,emailbody.toString());
-                try{
-                    startActivity(Intent.createChooser(emailntent," Choose Email Client ..."));
-                }catch(android.content.ActivityNotFoundException ex){
-                    Toast.makeText(Custom_Itinerary.this,"NO email clients installed",0).show();
-                }
-
+                add_details(details);
             }
         });
     }
+    public void add_details(final String title_pack){
+        AlertDialog.Builder builder2 = new AlertDialog.Builder(Custom_Itinerary.this);
+        View layout_view2 = getLayoutInflater().inflate(R.layout.add_people_layout,null);
+        Button add_people = (Button) layout_view2.findViewById(R.id.button_add);
+        et_date = (EditText) layout_view2.findViewById(R.id.editText_stdate);
+        et_date.setVisibility(INVISIBLE);
+        tv_dis = (TextView) layout_view2.findViewById(R.id.textView7);
+        tv_dis.setVisibility(INVISIBLE);
+        et_age = (EditText) layout_view2.findViewById(R.id.editTextage);
+        et_name = (EditText) layout_view2.findViewById(R.id.editText_name);
+        book_dets = "\n\n The details of the passengers travelling are - \n";
+        add_people.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                book_dets = book_dets + et_name.getText().toString() + " of age - " + et_age.getText().toString() + "\n" ;
+                et_name.setText("");
+                et_age.setText("");
+                // Get the text add it to the string..
+            }
+        });
+        Button book_final = (Button)layout_view2.findViewById(R.id.button_book);
+        book_final.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                book_dets = book_dets + et_name.getText().toString() + " of age - " + et_age.getText().toString() + "\n";
+                sendmessage(title_pack,book_dets);
+            }
+        });
+        builder2.setView(layout_view2);
+        AlertDialog alert = builder2.create();
+        alert.show();
+    }
+    @SuppressLint("WrongConstant")
+    public void sendmessage(String package_dets,String passenger_dets){
+
+        //package name to be added, people travelling added.
+        Intent emailntent = new Intent(Intent.ACTION_SEND);
+        emailntent.setType("message/rfc822");
+        emailntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"sarrof@yahoo.co.uk"});
+        //emailntent.putExtra(Intent.EXTRA_CC, new String[]{"yashrajsarrof18121998@gmail.com"});
+        emailntent.putExtra(Intent.EXTRA_SUBJECT,"Booking request ");
+        emailntent.putExtra(Intent.EXTRA_TEXT,package_dets + passenger_dets);
+        try{
+            startActivity(Intent.createChooser(emailntent," Choose Email Client ..."));
+        }catch(android.content.ActivityNotFoundException ex){
+            Toast.makeText(Custom_Itinerary.this,"NO email clients installed", 0).show();
+        }
+    }
+
 }

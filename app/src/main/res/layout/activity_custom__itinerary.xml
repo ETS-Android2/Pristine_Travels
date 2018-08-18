@@ -1,265 +1,379 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.075"
-        android:text="Fill in these fields..."
-        android:textSize="18dp"
+        android:layout_height="wrap_content"
+        android:text="@string/fill_in_these_fields"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:paddingBottom="15dp"
+        android:textSize="18sp"
         android:gravity="center_horizontal"/>
-    <LinearLayout
-        android:layout_weight="0.095"
-        android:orientation="horizontal"
-        android:layout_height="0dp"
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:paddingTop="5dp"
+        android:layout_height="wrap_content"
         >
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Duration - "
+            android:textColor="#000000"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.045" />
+
         <AutoCompleteTextView
             android:id="@+id/actv_days"
-            android:layout_weight="0.35"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:hint = "Duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:hint=" Enter Duration of the holiday"
             android:textSize="13sp"
-            />
-        <EditText
-            android:id="@+id/et_budget"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.35"
-            android:hint = "Budget/person(INR)"
-            android:inputType="number"
-            android:textSize="13sp"/>
-        <AutoCompleteTextView
-            android:id = "@+id/actv_places"
-            android:layout_weight="0.4"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:hint = "Country/Continent"
-            android:textSize="13sp"
-            />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_weight="0.095"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:orientation="horizontal">
-        <EditText
-            android:id = "@+id/et_adults_trv"
-            android:layout_weight="0.3"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:hint = "Number of Adults"
-            android:inputType="number"
-            android:textSize="14sp"/>
+            app:layout_constraintBottom_toBottomOf="@+id/textView4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.616"
+            app:layout_constraintStart_toEndOf="@+id/textView4"
+            app:layout_constraintTop_toTopOf="@+id/textView4"
+            app:layout_constraintVertical_bias="0.473" />
 
         <EditText
-            android:id = "@+id/et_rooms_req"
-            android:layout_width="0dp"
-            android:layout_weight="0.4"
-            android:layout_height="match_parent"
-            android:hint = "Rooms required"
+            android:id="@+id/et_budget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:hint="Enter Budget/person(INR)"
             android:inputType="number"
-            android:textSize="14sp"
-            />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_weight="0.095"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:orientation="horizontal">
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.568"
+            app:layout_constraintStart_toEndOf="@+id/textView5"
+            app:layout_constraintTop_toBottomOf="@+id/actv_days" />
+
+        <AutoCompleteTextView
+            android:id="@+id/actv_places"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:hint="Enter the Destination name"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.527"
+            app:layout_constraintStart_toEndOf="@+id/textView8"
+            app:layout_constraintTop_toBottomOf="@+id/et_budget" />
+
         <EditText
-            android:id = "@+id/et_child_trv"
-            android:layout_width="0dp"
-            android:layout_weight="0.4"
-            android:layout_height="match_parent"
-            android:hint = "Number of Children"
-            android:textSize="14sp"
+            android:id="@+id/et_rooms_req"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:hint="Enter number of rooms needed"
             android:inputType="number"
-            />
-        <EditText
-            android:id = "@+id/et_childage"
-            android:layout_weight="0.6"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:textSize="14sp"
-            android:hint = "Child Age (seperate by a space) "
-            />
-    </LinearLayout>
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.454"
+            app:layout_constraintStart_toEndOf="@+id/textView9"
+            app:layout_constraintTop_toBottomOf="@+id/actv_places" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="16dp"
+            android:text="Budget -"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@+id/actv_places"
+            app:layout_constraintStart_toStartOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="16dp"
+            android:text="Destination"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/actv_places"
+            app:layout_constraintStart_toStartOf="@+id/textView5"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="16dp"
+            android:text="Rooms Needed -"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/et_rooms_req"
+            app:layout_constraintStart_toStartOf="@+id/textView8"
+            app:layout_constraintTop_toBottomOf="@+id/textView8"
+            app:layout_constraintVertical_bias="0.521" />
+    </android.support.constraint.ConstraintLayout>
+
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.1"
+        android:layout_height="wrap_content"
         android:gravity="center">
         <Button
             android:id="@+id/but_conf"
+            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Confirm"/>
+
         <Button
             android:id="@+id/but_change"
+            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" Change "/>
+            android:text=" Change " />
     </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#000000"/>
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.1"
-        android:textSize="18dp"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:text = "Enter specifics(if any) for the destination you want to visit..."/>
-    <LinearLayout
+        android:paddingTop="15dp"
+        android:text="Enter specifics(if any) for places within the destination you want to visit. We will recommend anything left empty"
+        android:textSize="16dp"
+        android:paddingBottom="15dp"
+        android:textStyle="italic" />
+
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.09"
-        android:orientation="horizontal"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
+        android:layout_height="wrap_content"
         >
+
         <TextView
-            android:id= "@+id/text_day_indicator"
-            android:layout_weight = "0.15"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
+            android:id="@+id/text_day_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="40dp"
+            android:text="Date - "
             android:textColor="#000000"
-            android:text="Date - "/>
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
         <EditText
             android:id="@+id/et_date_from"
-            android:layout_weight = "0.3"
-            android:layout_width="0dp"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
             android:inputType="date"
-            />
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/text_day_indicator"
+            app:layout_constraintStart_toEndOf="@+id/text_day_indicator"
+            app:layout_constraintTop_toTopOf="@+id/text_day_indicator"
+            app:layout_constraintVertical_bias="0.411" />
+
         <TextView
-            android:layout_weight="0.1"
-            android:layout_width="0dp"
-            android:textSize="16sp"
-            android:layout_height="wrap_content"
+            android:id="@+id/textView10"
+            android:layout_width="36dp"
+            android:layout_height="27dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:text="  to  "
             android:textColor="#000000"
-            android:text = " to "/>
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/et_date_from"
+            app:layout_constraintStart_toEndOf="@+id/et_date_from"
+            app:layout_constraintTop_toTopOf="@+id/et_date_from"
+            app:layout_constraintVertical_bias="0.25" />
+
         <EditText
             android:id="@+id/et_date_to"
-            android:layout_weight = "0.3"
-            android:layout_width="0dp"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
             android:inputType="date"
-            />
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView10"
+            app:layout_constraintStart_toEndOf="@+id/textView10"
+            app:layout_constraintTop_toTopOf="@+id/textView10"
+            app:layout_constraintVertical_bias="0.75" />
+
         <ImageButton
-            android:id = "@+id/imgbtn_help"
-            android:layout_width="0dp"
-            android:layout_weight="0.15"
-            android:layout_height="wrap_content"
+            android:id="@+id/imgbtn_help"
+            android:layout_width="44dp"
+            android:layout_height="33dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp"
             android:background="#FFFFFF"
-            android:src = "@drawable/help"
-            android:scaleType="fitXY"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_weight="0.07"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        android:layout_marginTop="5dp">
+            android:scaleType="fitXY"
+            android:src="@drawable/help"
+            app:layout_constraintBottom_toBottomOf="@+id/et_date_to"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/et_date_to"
+            app:layout_constraintVertical_bias="1.0" />
+
         <TextView
-            android:id = "@+id/tv_place"
-            android:layout_weight="0.5"
+            android:id="@+id/tv_place"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text = "Enter a Place "
-            android:textSize="16sp"
-            android:textColor="#000000"/>
+            android:layout_height="23dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="0.5"
+            android:text="Enter a Place "
+            android:textColor="#000000"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_day_indicator"
+            app:layout_constraintVertical_bias="0.107" />
+
         <EditText
             android:id="@+id/et_place"
-            android:layout_weight="0.5"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:hint="@string/no_preference"
-            android:gravity = "center_vertical"
-            android:textSize="16sp"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_weight="0.1"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        android:layout_marginTop="5dp">
-        <TextView
-            android:id = "@+id/tv_hotel"
-            android:layout_weight="0.5"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:text = "@string/category_of_hotel"
-            android:textColor="#000000"/>
-        <AutoCompleteTextView
-            android:id="@+id/actv_hotel"
-            android:layout_weight="0.5"
-            android:layout_width="0dp"
-            android:textSize="16sp"
-            android:layout_height="wrap_content"
-            android:gravity = "center_vertical"
-            android:hint="None"
-            />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_weight="0.08"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        android:layout_marginTop="5dp">
-        <TextView
-            android:id = "@+id/tv_activity"
-            android:layout_weight="0.5"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:text = "Wishlist (if any)"
-            android:textColor="#000000"/>
-        <EditText
-            android:id="@+id/et_activity"
-            android:layout_weight="0.5"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:hint="None"
-            android:gravity = "center_vertical"
-            android:textSize="16sp"
-            />
-    </LinearLayout>
-    <LinearLayout
-        android:id = "@+id/ll_last"
-        android:layout_weight="0.1"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:orientation="horizontal">
-            <Button
-                android:id = "@+id/but_next"
-                android:layout_weight="0.5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text = " Next " />
-            <Button
-                android:id = "@+id/but_back"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"
-                android:text = " Back "/>
-        </LinearLayout>
-    <RelativeLayout
-        android:layout_weight="0.1"
-        android:layout_width="match_parent"
-        android:gravity="center_horizontal"
-        android:layout_height="0dp">
-        <Button
-            android:id = "@+id/but_finish"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_weight="0.5"
+            android:gravity="center_vertical"
+            android:hint="Any city/island/hill-station.."
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_place"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.557"
+            app:layout_constraintStart_toEndOf="@+id/tv_place"
+            app:layout_constraintTop_toTopOf="@+id/tv_place"
+            app:layout_constraintVertical_bias="0.666" />
 
-            android:text = " Request Itinerary " />
-    </RelativeLayout>
-</LinearLayout>
+        <TextView
+            android:id="@+id/tv_hotel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="0.5"
+            android:text="@string/category_of_hotel"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/actv_hotel"
+            app:layout_constraintStart_toStartOf="@+id/tv_place"
+            app:layout_constraintTop_toBottomOf="@+id/tv_place" />
+
+        <AutoCompleteTextView
+            android:id="@+id/actv_hotel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_weight="0.5"
+            android:gravity="center_vertical"
+            android:hint="eg- 5star/4star/Boutique.."
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.357"
+            app:layout_constraintStart_toEndOf="@+id/tv_hotel"
+            app:layout_constraintTop_toBottomOf="@+id/et_place" />
+
+        <TextView
+            android:id="@+id/tv_activity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="0.5"
+            android:text="Wishlist (if any)"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/et_activity"
+            app:layout_constraintStart_toStartOf="@+id/tv_hotel"
+            app:layout_constraintTop_toBottomOf="@+id/tv_hotel"
+            app:layout_constraintVertical_bias="0.666" />
+
+        <EditText
+            android:id="@+id/et_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_weight="0.5"
+            android:gravity="center_vertical"
+            android:hint="Any Must do Activity.."
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.353"
+            app:layout_constraintStart_toEndOf="@+id/tv_activity"
+            app:layout_constraintTop_toBottomOf="@+id/actv_hotel" />
+        </android.support.constraint.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp">
+        <Button
+            android:id="@+id/but_next"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Next "
+            />
+
+        <Button
+            android:id="@+id/but_back"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Back "/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#000000"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            >
+        <Button
+            android:id="@+id/but_finish"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Traveller Details"
+            />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

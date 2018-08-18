@@ -13,24 +13,27 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Name "
-        android:textSize="20sp"
+        android:text="Name :- "
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/editText_name"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.07"
         app:layout_constraintStart_toStartOf="@+id/textView7"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.418" />
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintVertical_bias="0.089" />
 
     <EditText
         android:id="@+id/editText_name"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="40dp"
+        android:layout_marginStart="8dp"
         app:layout_constraintBottom_toBottomOf="@+id/tv_add_name"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.801"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tv_add_name"
-        app:layout_constraintVertical_bias="0.526" />
+        app:layout_constraintVertical_bias="0.291" />
 
     <TextView
         android:id="@+id/tv_add_age"
@@ -39,58 +42,59 @@
         android:layout_marginBottom="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Age"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Age :-"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="@+id/tv_add_name"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/tv_add_name"
         app:layout_constraintTop_toBottomOf="@+id/tv_add_name"
-        app:layout_constraintVertical_bias="0.126" />
+        app:layout_constraintVertical_bias="0.229" />
 
     <EditText
         android:id="@+id/editTextage"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="40dp"
+        android:layout_marginStart="8dp"
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="@+id/tv_add_age"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tv_add_age"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <Button
-        android:id="@+id/button_add"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="120dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Add Passenger"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/editTextage"
+        app:layout_constraintHorizontal_bias="0.801"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_add_age"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="@+id/tv_add_age"
+        app:layout_constraintVertical_bias="0.0" />
 
-    <Button
-        android:id="@+id/button_book"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:text="Request Booking"
-        app:layout_constraintBottom_toBottomOf="@+id/button_add"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.857"
-        app:layout_constraintStart_toEndOf="@+id/button_add"
-        app:layout_constraintTop_toTopOf="@+id/button_add"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_bias="0.764">
 
+        <Button
+            android:id="@+id/button_add"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Passenger" />
+
+        <Button
+            android:id="@+id/button_book"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Request Booking" />
+    </LinearLayout>
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
@@ -100,7 +104,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Information for Booking"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textStyle="bold"
+        android:textSize="23sp"
         app:layout_constraintBottom_toTopOf="@+id/tv_add_name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -110,19 +115,16 @@
     <TextView
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_height="0dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:text="Starting Date"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/tv_add_name"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="92dp"
+        android:text="Starting Date :-"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.163"
-        app:layout_constraintStart_toStartOf="@+id/textView6"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
-        app:layout_constraintVertical_bias="0.752" />
+        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editText_stdate"
@@ -134,9 +136,8 @@
         android:inputType="date"
         app:layout_constraintBottom_toBottomOf="@+id/textView7"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.306"
-        app:layout_constraintStart_toEndOf="@+id/textView7"
-        app:layout_constraintTop_toTopOf="@+id/textView7"
-        app:layout_constraintVertical_bias="0.421" />
+        app:layout_constraintHorizontal_bias="0.683"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView7" />
 
 </android.support.constraint.ConstraintLayout>

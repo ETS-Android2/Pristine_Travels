@@ -273,5 +273,6 @@ Sightseeing as mentioned</string>
     <string name="start_date">Starting Date</string>
     <string name="category_of_hotel">  Category of Hotel</string>
     <string name="no_preference">No Preference</string>
+    <string name="fill_in_these_fields">Fill in these fields...</string>
 </resources>
 
