@@ -16,19 +16,11 @@ import com.google.android.gms.maps.MapView;
 
 public class Contact_about_us extends AppCompatActivity {
 
-    private MapView mapView;
-    private GoogleMap gmap;
-    TextView link_website;
-    Spanned Text;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact_about_us);
-        link_website = (TextView)findViewById(R.id.textView_link);
-        Text = Html.fromHtml("\t\tWebsite -- " +
-                "<a href='https://www.pristinetravels.com//'>pristinetravels.com</a>");
-        link_website.setMovementMethod(LinkMovementMethod.getInstance());
-        link_website.setText(Text);
+
 
     }
 

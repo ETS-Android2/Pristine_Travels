@@ -38,15 +38,6 @@
     <string name="title_activity_contact_about_us">Contact Us</string>
     <string name="title_activity_custom__itinerary">Customize your Itinerary</string>
     <string name="title_activity_packages_available">Popular Packages</string>
-    <string name="about_us_text">We are an IATA approved Travel Agency based in Kolkata established in 1997,
-        offering the most comprehensive service when it comes to travelling. Our prime products include\n\t\t
-        [1]Customized International Tour Packages\n\t\t
-        [2]Air Tickets\n\t\t
-        [3]Visa Consultancy\nOur office location is - Karnani Estate, 209 AJC Bose Road, 5th floor, Suite 194 Kolkata,West Bengal-700017. If
-        you have any queries do contact us. Our working hours are\n
-        Monday - Friday : 10 AM - 6 PM\n
-        Saturday : 10 AM - 2PM
- </string>
     <string name= "help_content">Don\'t worry if you don\'t understand what\'s happening here. Except for packing your bags,
         we are here to help you all the way. Here\'s what you need to do\n
         1. Fill in the country/continent with the duration, people travelling,along with your approximate budget.\n
@@ -69,7 +60,8 @@ photo stop at Adelaide Oval ground. Overnight in Adelaide\n\n
 Day 05 - Free day at leisure - Optional Hot Air Ballooning at Barossa Valley with Winery breakfast OR Kangaroo Island. This morning you have an option to go for hot air ballooning at Barossa Valley or visit
 to Kangaroo Island by ferry or you can spend your free day to explore the city on your own. Overnight in Adelaide.\n\n
 Day 06 - (FLIGHT TO MELBOURNE)\n
-Visit Eureka Sky Deck. On arrival into Melbourne transfer to Eureka Sky Deck. Overnight in Melbourne.\n\n</string>
+Visit Eureka Sky Deck. On arrival into Melbourne transfer to Eureka Sky Deck. Overnight in Melbourne.\n\nPRICE : 1.5 Lakh INR per person \n
+    Note - Prices subject to availability \n</string>
     <string name="New_Zealand_pack">Day 1 - Arrive Auckland \n
 On arrival, at the arrival hall, turn right towards rental car counters, complete hiring formalities and pick up your rental car and proceed to
 your hotel. There will be no assistance at the airport. Later in the evening proceed for Sky Tower Auckland Tour. Visit to the 186 meter Main
@@ -100,7 +92,9 @@ Travel north from the Scottish influenced city Dunedin towards historic Oamaru w
 road to the port city of Timaru and continue your journey across the Canterbury Plains before reaching Christchurch.(365 kms, 5hrs 15mins.
 approx.)\n\n
 Day 12 - Christchurch - Departure \n
-Today after breakfast proceed to airport, drop your car at the counter. Good days never comes to an end, hope you enjoy your holidays in New Zealand. Tour Concludes!\n\n</string>
+Today after breakfast proceed to airport, drop your car at the counter. Good days never comes to an end, hope you enjoy your holidays in New Zealand. Tour Concludes!\n\n
+    \nPRICE : 2.3 Lakh INR per person \n
+    Note - Prices subject to availability</string>
     <string name="America1_pack">
         Day 1 - Welcome to Los Angeles\n
 Bon Voyage! Today, your fun-filled tour of the United States of America begins. On
@@ -135,6 +129,8 @@ Day 12 - Visit the CNN Centre, Enjoy the World of Coca Cola and Experience the G
 Day 13 - Guided city tour and Visit Swami Narayan Temple. Free time for Shopping.\n
 After breakfast, proceed for a Guided city tour of Atlanta that includes the most interesting stops such as the Martin Luther King Jr. National Historical Park. Enjoy a drive through the Buckhed neighborhood to view stately mansions. Visit Ebenezer Baptist Church and other places within the Martin Luther King Jr. National Historical Park. Next we Visit the BAPS Shri Swaminarayan Mandir a traditional Hindu mandir, or place of worship, and is the largest mandir of its kind outside of India. The mandir is made of 34,450 pieces of hand-carved Italian marble, Turkish Limestone and Indian pink sandstone. Later, we take you to the most famous shopping centre of Atlanta the Phipps Plaza and Lenox Mall. Enjoy dinner at an Indian restaurant. Overnight in Atlanta\n\n
 Day 14 - Tour Ends, After breakfast proceed to the Airport.\n\n
+        \nPRICE : 3.1 Lakh INR per person \n
+    Note - Prices subject to availability
     </string>
     <string name="Europe1_pack">4 COUNTRIES, 8 PLACES, 11 DAYS\n\n
         Schedule : \n
@@ -155,17 +151,10 @@ Day 14 - Tour Ends, After breakfast proceed to the Airport.\n\n
                   Day 6 : In Milan, we roam around the city, We stay the night\n
                   Day 7 : Morning train to Cinque terre, Roam around the city , staying there for the night.\n
                   Day 8 : Leave for  Maranello in the morning. Look at the museums. At night, Train to Venice\n
-                  Day 9 : Venice, at night, if possible we take a train to Prague\n
-                  Day 10 : We stay at Prague Then we take the earliest flight back home, man.\n
-Places :\n
-\n
-1. Chamonix : A small village town in Southern France, amidst the Alps.\n
-2. Geneva :  A big city in Western Switzerland\n
-3. Milan : One of the very famous cities, of Italy. Must have heard of AC Milan and Inter Milan ( Football clubs )\n
-4. Cinque Terre : A small picturesque coastal town, by the beach.\n
-5. Maranello : This place doesn\'t need any introduction to you.\n
-6. Venice : One of the very beautiful medieval cities of Europe\n
-7. Prague : Another big city in the Czech-Republic.
+                  Day 9 : Venice, at night, we take a train to Prague\n
+                  Day 10 : Stay at Prague .Flight back home at night \n
+        \nPRICE : 1.7 Lakh INR per person \n
+    Note - Prices subject to availability\n
 </string>
     <string name="Europe2_pack">
 4 COUNTRIES,6 PLACES, 7 NIGHTS \n\n
@@ -191,6 +180,8 @@ Day 6 - Travel to Jungfraujoch ( highest Railway station of Europe ). Visit incl
 \t\t3] Bernese Oberland Mountains\n
 Day 7 - Visit Mt. Titlis and Lucerne. Rotair ( Rotating Cable car ride included ). Cliff Walk ( Latest Attraction ).\n
 Day 8 - Flight back home.
+        \nPRICE : 2.2 Lakh INR per person \n
+    Note - Prices subject to availability
     </string>
     <string name="UK_pack">Day 1 - ARRIVE IN LONDON, ENGLAND\n
 Welcome to London! After checking into your hotel and afternoon at leisure, we recommend our optional Taste of London excursion with dinner, followed by a guided illuminations cruise on the Thames River.\n\n
@@ -216,15 +207,10 @@ Day 9 - YORK-STRATFORD-UPON-AVON-LONDON\n
 On the last leg of your journey, stop at Stratford-upon-Avon, the fascinating Elizabethan town. Take pictures of Anne Hathaways Cottage, visit SHAKESPEARE'S BIRTHPLACE, and enjoy a light LUNCH. On return to London at about 3:30 pm, a Shownight Theater Evening would be an incredible finale to your vacation.\n\n
 Day 10 - LONDON\n
 Your vacation ends with breakfast this morning\n\n
+        \nPRICE : 2.2 Lakh INR per person \n
+    Note - Prices subject to availability\n
 </string>
-    <string name="Singapore_pack"> 5 days Singapore
-PACKAGE cost per person Rs59800/-
-Includes :Accommodation with bf for 4 night
-Airport transfers and Sights seeing in Private coach
-Visa
-Air fare additional
-No booking has been held, hence prices are subject to change.
-5% GST extra.
+    <string name="Singapore_pack">
 Day 01: BF at Hotel\n\t
         Arrive  Singapore.\n\t
         on Arrival, Private Transfer to Hotel ORCHARD PARADE with bf , for 04 Nights, on Bed and BF.\n\t
@@ -240,10 +226,10 @@ Universal Studios And Trick Eye Museum Combo Ticket inclusive Private  Transfers
 Day 05: BF at Hotel,\n\t
         Morning free\n\t
         Late Afternoon, Private Transfer to Singapore Airport, for return flight.
+        \nPRICE : 60000 INR per person \n
+    Note - Prices subject to availability
     </string>
-    <string name="Thailand_pack">6 days Thailand
-        Package cost Rs37500 per person\n
-5% GST extra\n
+    <string name="Thailand_pack">
 Usage of hotels as per standard hotel policy\n
 No service held on date, hence prices may vary, according to availability.
         Day 01 Arrive Bangkok, post immigration transfer to Phuket hotel private coach., check into Phuket Deevana Patong as per standard timing, 1 unit
@@ -261,10 +247,12 @@ Day 05 Bf at Hotel\n\t
 Day 06 Bf at hotel\n\t
         Entry to Sea life Aquarium and Madame Tussauds. Close to hotel no transfers factored hence.\n\t
         Evening drop at Airport.\n\n
+        \nPRICE : 40000 INR per person
 Includes:\n
 Accommodation for 5 nights with Bf\n
 Airport Pick and Drop in private.\n
-Sightseeing as mentioned</string>
+Sightseeing as mentioned\n
+    Note - Prices subject to availability</string>
     <string name="title_layout_help">Help\'s here</string>
     <string name="number_of_adults">No. of Adults</string>
     <string name="rooms_required">Rooms required</string>
@@ -274,5 +262,40 @@ Sightseeing as mentioned</string>
     <string name="category_of_hotel">  Category of Hotel</string>
     <string name="no_preference">No Preference</string>
     <string name="fill_in_these_fields">Fill in these fields...</string>
+    <string name="dets_aboutus">\t We are pleased to introduce ourselves as Customer Focused Total Travel Solution Provider offering wide range of services,
+        starting from arranging your journey ticket to designing your international trip.
+        We strongly believe in value of time and once we are entrusted with the job,
+        you can concentrate on your primary business rather working for your ticket and trip, your hotel booking or even planning your stay.
+        \n \t Whether you’re looking for a simple getaway or a unique destination holiday, Pristine Travel can help you plan the perfect trip.
+        Take advantage of our full suite of services. From tickets to tours, hotels to honeymoons - we have you covered.</string>
+    <string name="dets_air">\t The agency is engaged in offering all kinds of air tickets, be it domestic or international.
+        The company holds stocks of almost all-major domestic carriers in India and almost all-international carriers operating out of India.
+        The company has on line inventory access to over 100 international and domestic carriers ensuring instant bookings.</string>
+    <string name="dets_hotels">\t Pristine help’s you find the perfect place to stay. We have helped countless clients find accommodations
+        that meet their needs, from city hotels to beach resorts, from long-term stay options to mountain chalets,
+        from luxury stays to value accommodations. So contact us and tell us about what you’re looking for.
+\n \t Pristine has online inventory access to a wide range of accommodation options for approximately all locations over the world.
+        Thus negotiating the best rates for different categories and instantly booking accommodation for clients.</string>
+    <string name="dets_transfer">\t With Pristine you won’t have to worry about getting from point A to point B.
+        Whether it’s a flight arrangement, transfers from airport to hotel, Sightseeing or travelling between cities we
+        are their take care of all your transportation needs</string>
+    <string name="dets_sight">\t Pristine feature sightseeing and orientation in each city so you don’t miss the must see sights. You even personalize your trip by adding the activities and Excursions that will make your Gateway …. Exclusively yours.</string>
+    <string name="dets_visa">\t Pristine has a full-fledged department to ensure proper documentation, and quick hassle-free processing of visas to any country. We stock forms and are always updated with consulates. But granting of VISA is at sole discretion of the respective consulate.</string>
+    <string name="story_dets">\t We are an IATA approved travel agency based in Kolkata offering you the most comprehensive service
+        when it comes to traveling. You can bank upon us for your travel plans.
+        We would love to be your travel agent and hear about how we can make your plans exciting and stress-free.\n
+        The agency has total staff strength of 15. The team is lead by Rajkumar Sarrof, a director of the company and widely experienced in all fields of travel.
+        The agency boasts of trained staff who work relentlessly to give our clients/travelers a smooth, hassle free travel experience.
+        \n\tWe, at Pristine Travels Private Limited, are committed to make your every trip a memorable one. Be it a leisure trip within the country
+        or abroad with friends and family or a business trip, our impeccable service will make sure that you get the right things at the right moment and at the right price.
+        \n\t Since its inception, Team Pristine has been constantly evolving itself to meet the changing challenges and aspirations of the industry
+        and strive for better customer services. We are proud to have the maximum repeat business.
+        We are grateful to our patrons who have shown tremendous belief in us.
+        \n\t Pristine Travel has its network of professional associates across the world providing services to our valuable guests.
+        We are specialized in conducting customized tour specially tailored for our guests.</string>
+    <string name="contact_dets">\nAddress: Karnani Estate\n209 AJC Bose Road\n5th floor Suite-194\nKolkata-700017\nIATA Accredited\nMember-TAAI and TAFI\n</string>
+    <string name ="addr_dets">Karnani Estate\n209 AJC Bose Road\n5th floor Suite-194\nKolkata-700017</string>
+    <string name="phone_dets">+91 33 4048 5454</string>
+    <string name="email_dets">sarrof@yahoo.co.uk</string>
 </resources>
 
